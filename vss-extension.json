@@ -1,0 +1,44 @@
+{
+    "manifestVersion": 1,
+    "id": "githubpages-publish",
+    "version": "0.8.0",
+    "name": "GitHub Pages Publish",
+    "description": "Publishes documentation to GitHub Pages",
+    "categories": [
+        "Build and release"
+    ],
+    "publisher": "AccidentalFish",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+            }
+        ],
+    "icons": {
+        "default": "icon.png"
+     },
+     "content": {
+        "details": {
+            "path": "README.md"
+        },
+        "license": {
+            "path": "LICENSE.md"
+        }
+    },
+    "contributions": [
+        {
+            "id": "AccidentalFish.GitHubPages-Publish",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "buildAndReleaseTask"
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "buildAndReleaseTask"
+        }
+    ]
+}
