@@ -32,4 +32,4 @@ You'll then need to set the required parameters for the publishing process:
 
 It's really just a wrapper over some Git commands which you can see in the PowerShell script if you want to take a look or use this as a baseline for something slightly different.
 
-Any issues log them in the Issues area for this GitHub repository or [https://twitter.com/AzureTrenches](message me on Twitter).
+Any issues log them in the Issues area for this GitHub repository or [message me on Twitter](https://twitter.com/AzureTrenches]).

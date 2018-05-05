@@ -16,6 +16,13 @@ try {
     Write-Host "Cloning existing GitHub Pages branch"
 
     git clone https://${githubusername}:$githubaccesstoken@github.com/$githubusername/$repositoryname.git --branch=gh-pages $defaultWorkingDirectory\ghpages --quiet
+    
+    if ($lastexitcode -gt 0)
+    {
+        Write-Host "##vso[task.logissue type=error;]Unable to clone repository - check username, access token and repository name. Error code $lastexitcode"
+        [Environment]::Exit(1)
+    }
+    
     $to = "$defaultWorkingDirectory\ghpages"
 
     Write-Host "Copying new documentation into branch"
@@ -29,8 +36,21 @@ try {
     git config user.email $githubemail
     git config user.name $githubusername
     git add *
-    git commit -m $commitMessage --quiet
-    git push --quiet
+    git commit -m $commitMessage
+
+    if ($lastexitcode -gt 0)
+    {
+        Write-Host "##vso[task.logissue type=error;]Error committing - see earlier log, error code $lastexitcode"
+        [Environment]::Exit(1)
+    }
+
+    git push
+
+    if ($lastexitcode -gt 0)
+    {
+        Write-Host "##vso[task.logissue type=error;]Error pushing to gh-pages branch, probably an incorrect Personal Access Token, error code $lastexitcode"
+        [Environment]::Exit(1)
+    }
 
 } finally {
     Trace-VstsLeavingInvocation $MyInvocation

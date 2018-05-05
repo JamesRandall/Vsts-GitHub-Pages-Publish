@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "githubpages-publish",
-    "version": "0.9.0",
+    "version": "0.12.0",
     "name": "GitHub Pages Publish",
     "description": "Publishes documentation to GitHub Pages",
     "categories": [
@@ -22,6 +22,23 @@
         },
         "license": {
             "path": "LICENSE.md"
+        }
+    },
+    "tags": [
+        "GitHub",
+        "GitHub Pages",
+        "Pages",
+        "Documentation",
+        "Release",
+        "Integration",
+        "Publish"
+    ],
+    "links": {
+        "getstarted": {
+            "uri": "https://github.com/JamesRandall/Vsts-GitHub-Pages-Publish/blob/master/README.md"
+        },
+        "support": {
+            "uri": "https://github.com/JamesRandall/Vsts-GitHub-Pages-Publish/issues"
         }
     },
     "contributions": [

@@ -12,7 +12,7 @@
     "author": "James Randall",
     "version": {
         "Major": 0,
-        "Minor": 9,
+        "Minor": 12,
         "Patch": 0
     },
     "instanceNameFormat": "Publishes to GitHub Pages",
@@ -54,7 +54,7 @@
             "label": "GitHub Personal Access Token",
             "defaultValue": "",
             "required": true,
-            "helpMarkDown": "A GitHub Personal Access Token with read and write access to the gh-pages branch of your repository"
+            "helpMarkDown": "A GitHub Personal Access Token with read and write access to the repository. It's recommended to use a secure VSTS variable."
         },
         {
             "name": "repositoryname",
