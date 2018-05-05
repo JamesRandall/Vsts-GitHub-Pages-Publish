@@ -1,13 +1,13 @@
 # GitHub Pages Publish
 
-A build and release task to update GitHub Pages as part of a VSTS build or release. Ideal for publishing package documentation in conjunction with (DocFX)[https://dotnet.github.io/docfx/] and something I use as part of my automated package and release pipeline for (AzureFromTheTrenches.Commanding)[https://commanding.azurefromthetrenches.com].
+A build and release task to update GitHub Pages as part of a VSTS build or release. Ideal for publishing package documentation in conjunction with [DocFX](https://dotnet.github.io/docfx/) and something I use as part of my automated package and release pipeline for [AzureFromTheTrenches.Commanding](https://commanding.azurefromthetrenches.com).
 
 ## Prerequisites
 
 To use the plugin you need to:
 
-1. Have configured GitHub Pages to be hosted within the gh-pages branch of your repository. Setup instructions can be found (here)[https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/].
-2. Obtain a Personal Access Token that the build task can use to commit to your gh-pages branch. Instructions for doing that can be found (here)[https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/]. 
+1. Have configured GitHub Pages to be hosted within the gh-pages branch of your repository. Setup instructions can be found [here](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/).
+2. Obtain a Personal Access Token that the build task can use to commit to your gh-pages branch. Instructions for doing that can be found [here](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/). 
 
 ## Installation
 
@@ -32,4 +32,4 @@ You'll then need to set the required parameters for the publishing process:
 
 It's really just a wrapper over some Git commands which you can see in the PowerShell script if you want to take a look or use this as a baseline for something slightly different.
 
-Any issues log them in the Issues area for this GitHub repository or (https://twitter.com/AzureTrenches)[message me on Twitter].
+Any issues log them in the Issues area for this GitHub repository or [https://twitter.com/AzureTrenches](message me on Twitter).
