@@ -36,7 +36,7 @@ try {
     git config user.email $githubemail
     git config user.name $githubusername
     git add *
-    git commit -m $commitMessage
+    git commit --allow-empty -m $commitMessage
 
     if ($lastexitcode -gt 0)
     {
