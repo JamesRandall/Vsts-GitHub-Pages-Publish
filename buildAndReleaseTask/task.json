@@ -1,6 +1,6 @@
 {
     "id": "65386086-C58C-4396-BC83-4C7A39E84448",
-    "name": "GitHubPagesPublishBrancher",
+    "name": "GitHubPagesPublish",
     "friendlyName": "Publish to GitHub Pages",
     "description": "Publishes files to a GitHub repository",
     "helpMarkDown": "",
