@@ -6,7 +6,7 @@ A build and release task to update GitHub Pages as part of a VSTS build or relea
 
 To use the plugin you need to:
 
-1. Have configured GitHub Pages to be hosted within the a gh-pages(or other specified) branch of your repository. Setup instructions can be found [here](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/).
+1. Have configured GitHub Pages to be hosted within the gh-pages(or other specified) branch of your repository. Setup instructions can be found [here](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/).
 2. Obtain a Personal Access Token that the build task can use to commit to your gh-pages(or other specified) branch. Instructions for doing that can be found [here](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/). 
 
 ## Installation
