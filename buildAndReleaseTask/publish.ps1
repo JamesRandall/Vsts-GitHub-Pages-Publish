@@ -10,12 +10,13 @@ try {
     $githubaccesstoken = Get-VstsInput -Name 'githubaccesstoken' -Require
     $repositoryname = Get-VstsInput -Name 'repositoryname' -Require
     $commitMessage = Get-VstsInput -Name 'commitmessage' -Require
+    $branchName = Get-VstsInput -Name 'branchname' -Require
 
     $defaultWorkingDirectory = Get-VstsTaskVariable -Name 'System.DefaultWorkingDirectory'    
     
-    Write-Host "Cloning existing GitHub Pages branch"
+    Write-Host "Cloning existing GitHub repository"
 
-    git clone https://${githubusername}:$githubaccesstoken@github.com/$githubusername/$repositoryname.git --branch=gh-pages $defaultWorkingDirectory\ghpages --quiet
+    git clone https://${githubusername}:$githubaccesstoken@github.com/$githubusername/$repositoryname.git --branch=$branchName $defaultWorkingDirectory\ghpages --quiet
     
     if ($lastexitcode -gt 0)
     {
@@ -29,7 +30,7 @@ try {
 
     Copy-Item $docPath $to -recurse -Force
 
-    Write-Host "Committing the GitHub Pages Branch"
+    Write-Host "Committing the GitHub repository"
 
     cd $defaultWorkingDirectory\ghpages
     git config core.autocrlf false
@@ -48,7 +49,7 @@ try {
 
     if ($lastexitcode -gt 0)
     {
-        Write-Host "##vso[task.logissue type=error;]Error pushing to gh-pages branch, probably an incorrect Personal Access Token, error code $lastexitcode"
+        Write-Host "##vso[task.logissue type=error;]Error pushing to $branchName branch, probably an incorrect Personal Access Token, error code $lastexitcode"
         [Environment]::Exit(1)
     }
 
