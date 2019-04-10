@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "githubpages-publish",
-    "version": "0.13.0",
+    "version": "1.0.0",
     "name": "GitHub Pages Publish",
     "public": true,
     "description": "Publishes documentation to GitHub Pages",
