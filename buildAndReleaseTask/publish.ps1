@@ -45,7 +45,7 @@ try {
         [Environment]::Exit(1)
     }
 
-    git push
+    git push --quiet
 
     if ($lastexitcode -gt 0)
     {
