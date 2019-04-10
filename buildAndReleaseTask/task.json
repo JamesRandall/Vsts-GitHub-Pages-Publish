@@ -11,8 +11,8 @@
     ],
     "author": "James Randall",
     "version": {
-        "Major": 0,
-        "Minor": 14,
+        "Major": 1,
+        "Minor": 0,
         "Patch": 0
     },
     "instanceNameFormat": "Publishes to GitHub Pages",
