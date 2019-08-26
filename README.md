@@ -26,7 +26,8 @@ You'll then need to set the required parameters for the publishing process:
 |GitHub Personal Access Token|The personal access token you obtained earlier. I recommend storing this in a secure VSTS build and release variable.|
 |GitHub Email Address|The email address you want associated with the commit to the gh-pages branch|
 |Repository Name|The name of the GitHub repository that you want to publish pages to|
-|Commit Message|The message you want associated with the commit - this defaults to "Automated Release $(Release.ReleaseId)"
+|Commit Message|The message you want associated with the commit - this defaults to "Automated Release $(Release.ReleaseId)"|
+|Clean Repository?|Check this parameter to clean the repository before copying the source files.|
 
 ## Bits and Pieces
 
