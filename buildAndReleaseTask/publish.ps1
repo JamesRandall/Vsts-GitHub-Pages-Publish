@@ -33,7 +33,7 @@ try {
     if ($cleanRepository)
     {
         Write-Host "Cleaning the GitHub repository"
-        git rm -r '*'
+        git rm -f -r '*'
     }
 
     $to = "$defaultWorkingDirectory\ghpages"
