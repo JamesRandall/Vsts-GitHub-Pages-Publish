@@ -79,6 +79,14 @@
             "defaultValue": "Automated Release $(Release.ReleaseId)",
             "required": true,
             "helpMarkDown": "The message that is attached to the commit"
+        },
+        {
+            "name": "cleanRepository",
+            "type": "boolean",
+            "label": "Clean Repository?",
+            "defaultValue": false,
+            "required": true,
+            "helpMarkDown": "Check this setting to clean the repository before copying the source files."
         }
     ],
     "execution": {

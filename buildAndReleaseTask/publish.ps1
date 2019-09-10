@@ -11,6 +11,7 @@ try {
     $repositoryname = Get-VstsInput -Name 'repositoryname' -Require
     $commitMessage = Get-VstsInput -Name 'commitmessage' -Require
     $branchName = Get-VstsInput -Name 'branchname' -Require
+    $cleanRepository = Get-VstsInput -Name 'cleanrepository' -AsBool -Require
 
     $defaultWorkingDirectory = Get-VstsTaskVariable -Name 'System.DefaultWorkingDirectory'    
     
@@ -24,6 +25,17 @@ try {
         [Environment]::Exit(1)
     }
     
+    cd $defaultWorkingDirectory\ghpages
+    git config core.autocrlf false
+    git config user.email $githubemail
+    git config user.name $githubusername
+
+    if ($cleanRepository)
+    {
+        Write-Host "Cleaning the GitHub repository"
+        git rm -f -r '*'
+    }
+
     $to = "$defaultWorkingDirectory\ghpages"
 
     Write-Host "Copying new documentation into branch"
@@ -32,10 +44,6 @@ try {
 
     Write-Host "Committing the GitHub repository"
 
-    cd $defaultWorkingDirectory\ghpages
-    git config core.autocrlf false
-    git config user.email $githubemail
-    git config user.name $githubusername
     git add *
     git commit --allow-empty -m $commitMessage
 
