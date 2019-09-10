@@ -29,6 +29,23 @@ You'll then need to set the required parameters for the publishing process:
 |Commit Message|The message you want associated with the commit - this defaults to "Automated Release $(Release.ReleaseId)"|
 |Clean Repository?|Check this parameter to clean the repository before copying the source files.|
 
+## YAML Example
+
+Here's an example of how to use the task in a YAML pipeline:
+
+```YAML
+- task: GitHubPagesPublish@1
+  inputs:
+    docPath: '$(System.DefaultWorkingDirectory)\Documentation\site\*'
+    githubusername: 'user'
+    githubemail: 'user@example.org'
+    githubaccesstoken: '*****'
+    repositoryname: 'your-repository'
+    branchname: 'gh-pages'
+    commitmessage: 'Automated Release $(Release.ReleaseId)'
+    cleanRepository: false
+```
+
 ## Bits and Pieces
 
 It's really just a wrapper over some Git commands which you can see in the PowerShell script if you want to take a look or use this as a baseline for something slightly different.
