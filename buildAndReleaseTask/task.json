@@ -84,7 +84,7 @@
             "name": "cleanRepository",
             "type": "boolean",
             "label": "Clean Repository?",
-            "defaultValue": "false",
+            "defaultValue": false,
             "required": true,
             "helpMarkDown": "Check this setting to clean the repository before copying the source files."
         }
