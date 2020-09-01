@@ -5,14 +5,11 @@
     "description": "Publishes files to a GitHub repository",
     "helpMarkDown": "",
     "category": "Utility",
-    "visibility": [
-        "Build",
-        "Release"
-    ],
+    "visibility": ["Build", "Release"],
     "author": "James Randall",
     "version": {
         "Major": 1,
-        "Minor": 0,
+        "Minor": 1,
         "Patch": 0
     },
     "instanceNameFormat": "Publishes to GitHub Pages",
@@ -31,6 +28,14 @@
             "defaultValue": "$(System.DefaultWorkingDirectory)\\Documentation\\site\\*",
             "required": true,
             "helpMarkDown": "Source files"
+        },
+        {
+            "name": "githuburl",
+            "type": "string",
+            "label": "GitHub/GitHub Enterprise URL",
+            "defaultValue": "github.com",
+            "required": true,
+            "helpMarkDown": "GitHub or GitHub Enterprise URL"
         },
         {
             "name": "githubusername",
@@ -84,9 +89,7 @@
     "execution": {
         "PowerShell3": {
             "target": "publish.ps1",
-            "platforms": [
-                "windows"
-            ],
+            "platforms": ["windows"],
             "workingDirectory": "$(currentDirectory)"
         }
     }

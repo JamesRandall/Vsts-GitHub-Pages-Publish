@@ -1,23 +1,21 @@
 {
     "manifestVersion": 1,
     "id": "githubpages-publish",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "name": "GitHub Pages Publish",
     "public": true,
     "description": "Publishes documentation to GitHub Pages",
-    "categories": [
-        "Build and release"
-    ],
+    "categories": ["Build and release"],
     "publisher": "AccidentalFish",
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
-            }
-        ],
+        }
+    ],
     "icons": {
         "default": "icon.png"
-     },
-     "content": {
+    },
+    "content": {
         "details": {
             "path": "README.md"
         },
@@ -46,9 +44,7 @@
         {
             "id": "AccidentalFish.GitHubPages-Publish",
             "type": "ms.vss-distributed-task.task",
-            "targets": [
-                "ms.vss-distributed-task.tasks"
-            ],
+            "targets": ["ms.vss-distributed-task.tasks"],
             "properties": {
                 "name": "buildAndReleaseTask"
             }

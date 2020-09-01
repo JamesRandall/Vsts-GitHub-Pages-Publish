@@ -11,12 +11,13 @@ try {
     $repositoryname = Get-VstsInput -Name 'repositoryname' -Require
     $commitMessage = Get-VstsInput -Name 'commitmessage' -Require
     $branchName = Get-VstsInput -Name 'branchname' -Require
+    $githubUrl = Get-VstsInput -Name 'githuburl' -Require
 
     $defaultWorkingDirectory = Get-VstsTaskVariable -Name 'System.DefaultWorkingDirectory'    
     
     Write-Host "Cloning existing GitHub repository"
 
-    git clone https://${githubusername}:$githubaccesstoken@github.com/$githubusername/$repositoryname.git --branch=$branchName $defaultWorkingDirectory\ghpages --quiet
+    git clone https://${githubusername}:$githubaccesstoken@$githubUrl/$githubusername/$repositoryname.git --branch=$branchName $defaultWorkingDirectory\ghpages --quiet
     
     if ($lastexitcode -gt 0)
     {
